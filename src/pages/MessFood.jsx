@@ -13,29 +13,29 @@ const MessFood = () => {
 
   return (
     <div className="min-h-screen text-gray-800 bg-gradient-to-br from-orange-50 to-orange-100">
-      <section className="px-6 py-16">
-        <h3 className="mb-10 text-3xl font-bold text-center text-swiggy-700">
+      <section className="px-4 sm:px-6 py-12 sm:py-16">
+        <h3 className="mb-8 sm:mb-10 text-2xl sm:text-3xl font-bold text-center text-swiggy-700">
           Mess & Tiffin Services Nearby
         </h3>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-7xl mx-auto">
           {messItems.map((item) => (
             <Card key={item.id} className="shadow-lg rounded-2xl overflow-hidden hover:shadow-xl transition-shadow">
               <CardContent className="p-0">
                 <img 
                   src={item.img} 
                   alt={item.name}
-                  className="object-cover w-full h-48" 
+                  className="object-cover w-full h-40 sm:h-48" 
                 />
-                <div className="p-6">
-                  <h4 className="text-xl font-semibold mb-1">{item.name}</h4>
-                  <p className="mb-3 text-sm text-gray-600">
+                <div className="p-4 sm:p-6">
+                  <h4 className="text-lg sm:text-xl font-semibold mb-1">{item.name}</h4>
+                  <p className="mb-3 text-xs sm:text-sm text-gray-600">
                     Daily meals starting ₹{item.price} only! Verified by students.
                   </p>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="font-semibold text-green-600">⭐ {item.rating}/5</span>
-                    <span className="font-semibold text-swiggy-500">₹{item.price}</span>
+                    <span className="text-sm sm:text-base font-semibold text-green-600">⭐ {item.rating}/5</span>
+                    <span className="text-sm sm:text-base font-semibold text-swiggy-500">₹{item.price}</span>
                   </div>
-                  <Button className="w-full text-white bg-swiggy-500 hover:bg-swiggy-600">
+                  <Button className="w-full text-sm sm:text-base text-white bg-swiggy-500 hover:bg-swiggy-600">
                     Order Now
                   </Button>
                 </div>
@@ -45,24 +45,24 @@ const MessFood = () => {
         </div>
       </section>
       
-      <section className="px-6 py-12 bg-white">
+      <section className="px-4 sm:px-6 py-8 sm:py-12 bg-white">
         <div className="max-w-4xl mx-auto text-center">
-          <h4 className="mb-6 text-2xl font-bold text-swiggy-700">Why Choose Our Mess Partners?</h4>
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <h4 className="mb-4 sm:mb-6 text-xl sm:text-2xl font-bold text-swiggy-700">Why Choose Our Mess Partners?</h4>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
             <div className="p-4">
-              <div className="mb-3 text-3xl">✅</div>
-              <h5 className="mb-2 font-semibold">Student Verified</h5>
-              <p className="text-gray-600">All mess services are verified and rated by fellow students</p>
+              <div className="mb-2 sm:mb-3 text-2xl sm:text-3xl">✅</div>
+              <h5 className="mb-1 sm:mb-2 text-base sm:text-lg font-semibold">Student Verified</h5>
+              <p className="text-sm sm:text-base text-gray-600">All mess services are verified and rated by fellow students</p>
             </div>
             <div className="p-4">
-              <div className="mb-3 text-3xl">💰</div>
-              <h5 className="mb-2 font-semibold">Budget Friendly</h5>
-              <p className="text-gray-600">Affordable meals starting from just ₹49 per meal</p>
+              <div className="mb-2 sm:mb-3 text-2xl sm:text-3xl">💰</div>
+              <h5 className="mb-1 sm:mb-2 text-base sm:text-lg font-semibold">Budget Friendly</h5>
+              <p className="text-sm sm:text-base text-gray-600">Affordable meals starting from just ₹49 per meal</p>
             </div>
             <div className="p-4">
-              <div className="mb-3 text-3xl">🚚</div>
-              <h5 className="mb-2 font-semibold">Quick Delivery</h5>
-              <p className="text-gray-600">Fast delivery to your hostel or college campus</p>
+              <div className="mb-2 sm:mb-3 text-2xl sm:text-3xl">🚚</div>
+              <h5 className="mb-1 sm:mb-2 text-base sm:text-lg font-semibold">Quick Delivery</h5>
+              <p className="text-sm sm:text-base text-gray-600">Fast delivery to your hostel or college campus</p>
             </div>
           </div>
         </div>

@@ -29,7 +29,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 text-gray-800">
       {/* Hero Section with Background Image and Glassmorphism */}
-      <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -41,21 +41,23 @@ const Home = () => {
         </div>
 
         {/* Glassmorphism Content Card */}
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-          <div className="backdrop-blur-xl bg-white/10 rounded-3xl p-12 border border-white/20 shadow-2xl">
-            <div className="flex justify-center mb-6">
+        <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto w-full">
+          <div className="backdrop-blur-xl bg-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 border border-white/20 shadow-2xl">
+            <div className="flex justify-center mb-4 sm:mb-6">
               <img 
                 src="https://i.pinimg.com/1200x/73/97/04/739704de9f9f307063de2e94e45d4f89.jpg" 
                 alt="Swiggy" 
-                className="h-20"
+                className="h-12 sm:h-16 lg:h-20"
               />
             </div>
-            <h2 className="text-6xl font-bold mb-4 text-white drop-shadow-lg">Swiggy Student 🎓</h2>
-            <p className="text-2xl text-white/95 mb-8 drop-shadow-md">
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-3 sm:mb-4 text-white drop-shadow-lg">
+              Swiggy Student 🎓
+            </h2>
+            <p className="text-base sm:text-xl lg:text-2xl text-white/95 mb-6 sm:mb-8 drop-shadow-md">
               Built for students, by understanding students
             </p>
             <Link to="/student-plan">
-              <Button className="bg-white text-swiggy-500 font-semibold hover:bg-gray-100 px-10 py-4 text-xl shadow-xl hover:scale-105 transition-transform">
+              <Button className="bg-white text-swiggy-500 font-semibold hover:bg-gray-100 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 text-base sm:text-lg lg:text-xl shadow-xl hover:scale-105 transition-transform w-full sm:w-auto">
                 Join Now - Only ₹99/month
               </Button>
             </Link>
@@ -64,9 +66,13 @@ const Home = () => {
       </section>
 
       {/* Problems vs Solutions */}
-      <section className="py-20 px-6">
-        <h3 className="text-4xl font-bold text-center mb-4 text-swiggy-600">We Get Student Life</h3>
-        <p className="text-center text-gray-600 mb-16 text-lg">Common problems? We've got solutions.</p>
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
+        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-3 sm:mb-4 text-swiggy-600">
+          We Get Student Life
+        </h3>
+        <p className="text-center text-gray-600 mb-8 sm:mb-12 lg:mb-16 text-sm sm:text-base lg:text-lg">
+          Common problems? We've got solutions.
+        </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {studentProblems.map((item, idx) => (
@@ -93,35 +99,37 @@ const Home = () => {
       </section>
 
       {/* Features Grid */}
-      <section className="py-20 px-6 bg-white">
-        <h3 className="text-4xl font-bold text-center mb-16 text-swiggy-600">Exclusive Student Features</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-white">
+        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 lg:mb-16 text-swiggy-600">
+          Exclusive Student Features
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto">
           <Link to="/mess" className="group">
-            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105">
-              <div className="text-6xl mb-4">🍛</div>
-              <h4 className="text-2xl font-bold mb-2 text-swiggy-600">Mess & Tiffin</h4>
-              <p className="text-gray-600">Home-style meals starting ₹49</p>
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105">
+              <div className="text-4xl sm:text-5xl lg:text-6xl mb-3 sm:mb-4">🍛</div>
+              <h4 className="text-xl sm:text-2xl font-bold mb-2 text-swiggy-600">Mess & Tiffin</h4>
+              <p className="text-sm sm:text-base text-gray-600">Home-style meals starting ₹49</p>
             </div>
           </Link>
           
           <Link to="/night" className="group">
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 text-white">
-              <div className="text-6xl mb-4">🌙</div>
-              <h4 className="text-2xl font-bold mb-2">Night Mode</h4>
-              <p className="text-gray-300">Order anytime, even at 3 AM</p>
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 text-white">
+              <div className="text-4xl sm:text-5xl lg:text-6xl mb-3 sm:mb-4">🌙</div>
+              <h4 className="text-xl sm:text-2xl font-bold mb-2">Night Mode</h4>
+              <p className="text-sm sm:text-base text-gray-300">Order anytime, even at 3 AM</p>
             </div>
           </Link>
           
           <Link to="/rewards" className="group">
-            <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105">
-              <div className="text-6xl mb-4">🏆</div>
-              <h4 className="text-2xl font-bold mb-2 text-swiggy-600">Rewards</h4>
-              <p className="text-gray-600">Earn coins & get free food</p>
+            <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105">
+              <div className="text-4xl sm:text-5xl lg:text-6xl mb-3 sm:mb-4">🏆</div>
+              <h4 className="text-xl sm:text-2xl font-bold mb-2 text-swiggy-600">Rewards</h4>
+              <p className="text-sm sm:text-base text-gray-600">Earn coins & get free food</p>
             </div>
           </Link>
           
           <Link to="/student-plan" className="group">
-            <div className="bg-gradient-to-br from-swiggy-500 to-swiggy-600 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 text-white">
+            <div className="bg-gradient-to-br from-swiggy-500 to-swiggy-600 p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 text-white">
               <div className="text-6xl mb-4">🎓</div>
               <h4 className="text-2xl font-bold mb-2">Student Plan</h4>
               <p>Unlimited benefits at ₹99/month</p>
@@ -131,38 +139,42 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 px-6 bg-gradient-to-r from-swiggy-500 to-swiggy-600 text-white">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-gradient-to-r from-swiggy-500 to-swiggy-600 text-white">
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-4xl font-bold text-center mb-16">Trusted by Students</h3>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-            <div className="backdrop-blur-sm bg-white/10 p-6 rounded-xl border border-white/20">
-              <div className="text-5xl font-bold mb-2">50K+</div>
-              <div className="text-xl">Active Students</div>
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-center mb-8 sm:mb-12 lg:mb-16">
+            Trusted by Students
+          </h3>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 text-center">
+            <div className="backdrop-blur-sm bg-white/10 p-4 sm:p-6 rounded-xl border border-white/20">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-1 sm:mb-2">50K+</div>
+              <div className="text-sm sm:text-base lg:text-xl">Active Students</div>
             </div>
-            <div className="backdrop-blur-sm bg-white/10 p-6 rounded-xl border border-white/20">
-              <div className="text-5xl font-bold mb-2">500+</div>
-              <div className="text-xl">Partner Restaurants</div>
+            <div className="backdrop-blur-sm bg-white/10 p-4 sm:p-6 rounded-xl border border-white/20">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-1 sm:mb-2">500+</div>
+              <div className="text-sm sm:text-base lg:text-xl">Partner Restaurants</div>
             </div>
-            <div className="backdrop-blur-sm bg-white/10 p-6 rounded-xl border border-white/20">
-              <div className="text-5xl font-bold mb-2">₹500</div>
-              <div className="text-xl">Avg. Savings/Month</div>
+            <div className="backdrop-blur-sm bg-white/10 p-4 sm:p-6 rounded-xl border border-white/20">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-1 sm:mb-2">₹500</div>
+              <div className="text-sm sm:text-base lg:text-xl">Avg. Savings/Month</div>
             </div>
-            <div className="backdrop-blur-sm bg-white/10 p-6 rounded-xl border border-white/20">
-              <div className="text-5xl font-bold mb-2">4.8★</div>
-              <div className="text-xl">Student Rating</div>
+            <div className="backdrop-blur-sm bg-white/10 p-4 sm:p-6 rounded-xl border border-white/20">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-1 sm:mb-2">4.8★</div>
+              <div className="text-sm sm:text-base lg:text-xl">Student Rating</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 text-center">
-        <h3 className="text-4xl font-bold mb-6 text-swiggy-600">Ready to Save Money?</h3>
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 text-center">
+        <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-swiggy-600">
+          Ready to Save Money?
+        </h3>
+        <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
           Join thousands of students already enjoying hassle-free food delivery
         </p>
         <Link to="/student-plan">
-          <Button className="bg-swiggy-500 text-white font-semibold hover:bg-swiggy-600 px-10 py-4 text-xl rounded-xl shadow-lg hover:scale-105 transition-transform">
+          <Button className="bg-swiggy-500 text-white font-semibold hover:bg-swiggy-600 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 text-base sm:text-lg lg:text-xl rounded-xl shadow-lg hover:scale-105 transition-transform w-full sm:w-auto max-w-xs sm:max-w-none mx-auto">
             Get Student Plan Now →
           </Button>
         </Link>

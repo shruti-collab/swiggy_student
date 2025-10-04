@@ -2,9 +2,9 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-gray-300 py-10 text-center">
+    <footer className="py-10 text-center text-gray-300 bg-gray-800">
       <p>© 2025 Swiggy Student Prototype | Created for Food For Thought Challenge</p>
-      <p className="text-sm mt-2">Designed by Shruti Kumari</p>
+      <p className="mt-2 text-sm">Designed for Food For Thought</p>
     </footer>
   );
 };
